@@ -1,0 +1,8 @@
+Exercise 14 commands used
+#Frontend
+1. docker build . -t example-front
+2. docker run -p 5000:5000 example-front
+
+#Backend
+1. docker build . -t example-backend
+2. docker run -p 8080:8080 example-backend

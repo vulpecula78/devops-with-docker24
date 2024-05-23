@@ -1,0 +1,28 @@
+Script started on 2022-12-30 13:07:38+02:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="195" LINES="40"]
+xxxx@xxxxx:~/Asiakirjat/Opinnot/devops_docker> docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+xxxx@xxxxx:~/Asiakirjat/Opinnot/devops_docker> docker images
+REPOSITORY    TAG       IMAGE ID       CREATED         SIZE
+nginx         latest    1403e55ab369   9 days ago      142MB
+hello-world   latest    feb5d9fea6a5   15 months ago   13.3kB
+xxxx@xxxxx:~/Asiakirjat/Opinnot/devops_docker> docker image rm 1403e
+Untagged: nginx:latest
+Untagged: nginx@sha256:0047b729188a15da49380d9506d65959cce6d40291ccfb4e039f5dc7efd33286
+Deleted: sha256:1403e55ab369cd1c8039c34e6b4d47ca40bbde39c371254c7cba14756f472f52
+Deleted: sha256:0274f249eda4c376bde7cbe0b719ea3aef10201846d7262f37f7a0fc0b4fcf90
+Deleted: sha256:e01fc49cb889c5dd6b11390e9863ba00f886315c5a403ee5955fb5c88d2aa576
+Deleted: sha256:b2a367ee540c5d40c704fdece005b422f55f85a61b96a25bd99d6847669958a0
+Deleted: sha256:2c1c6d39cbcc4767b0798aacc03f203951057e77c5edebca1fdfbcd4997f2919
+Deleted: sha256:d260638126e1d2d3202dec36b67f124624fbcdad3afedd334e7260bf75dad8da
+Deleted: sha256:8a70d251b65364698f195f5a0b424e0d67de81307b79afbe662abd797068a069
+xxxx@xxxxx:~/Asiakirjat/Opinnot/devops_docker> docker image rm feb5d9
+Untagged: hello-world:latest
+Untagged: hello-world@sha256:c77be1d3a47d0caf71a82dd893ee61ce01f32fc758031a6ec4cf1389248bb833
+Deleted: sha256:feb5d9fea6a5e9606aa995e879d862b825965ba48de054caab5ef356dc6b3412
+Deleted: sha256:e07ee1baac5fae6a26f30cabfe54a36d3402f96afda318fe0a96cec4ca393359
+xxxx@xxxxx:~/Asiakirjat/Opinnot/devops_docker> docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+xxxx@xxxxx:~/Asiakirjat/Opinnot/devops_docker> exit
+exit
+
+Script done on 2022-12-30 13:09:01+02:00 [COMMAND_EXIT_CODE="0"]

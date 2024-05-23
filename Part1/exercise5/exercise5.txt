@@ -1,0 +1,27 @@
+Script started on 2023-02-03 11:11:05+02:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="212" LINES="38"]
+xxxx@xxxxx:~/Asiakirjat/Opinnot/devops_docker> docker image ls
+REPOSITORY                          TAG       IMAGE ID       CREATED         SIZE
+devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   23 months ago   83MB
+devopsdockeruh/simple-web-service   alpine    fd312adc88e0   23 months ago   15.7MB
+xxxx@xxxxx:~/Asiakirjat/Opinnot/devops_docker> docker run -it -d --name exercise15 devopsdockeruh/simple-web-service:alpine
+f35e5d922535614adfd4bab855ad5c5a427ee282d52537a63c5a2fbd61f5d11a
+xxxx@xxxxx:~/Asiakirjat/Opinnot/devops_docker> docker exec -it exercise15 sh
+/usr/src/app # tail -f ./text.log
+2023-02-03 09:12:10 +0000 UTC
+2023-02-03 09:12:12 +0000 UTC
+2023-02-03 09:12:14 +0000 UTC
+2023-02-03 09:12:16 +0000 UTC
+2023-02-03 09:12:18 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2023-02-03 09:12:20 +0000 UTC
+2023-02-03 09:12:22 +0000 UTC
+2023-02-03 09:12:24 +0000 UTC
+2023-02-03 09:12:26 +0000 UTC
+2023-02-03 09:12:28 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2023-02-03 09:12:30 +0000 UTC
+2023-02-03 09:12:32 +0000 UTC
+^C
+/usr/src/app # exit
+xxxx@xxxxx:~/Asiakirjat/Opinnot/devops_docker> exit
+Script done on 2023-02-03 11:12:47+02:00 [COMMAND_EXIT_CODE="130"]

@@ -1,0 +1,21 @@
+xxxx@xxxxx:~/opiskelu/devops_docker/devops_with_docker/Part1> docker run -it -d --name exercise13 devopsdockeruh/simple-web-service:ubuntu
+d20e67fef8c379d1035c4ffac6194525c3048f480022c43519f7872b10db98bb
+xxxx@xxxxx:~/opiskelu/devops_docker/devops_with_docker/Part1> docker exec -it exercise13 bash
+root@d20e67fef8c3:/usr/src/app# ls
+server  text.log
+root@d20e67fef8c3:/usr/src/app# tail text.log
+2024-05-21 21:24:59 +0000 UTC
+2024-05-21 21:25:01 +0000 UTC
+2024-05-21 21:25:03 +0000 UTC
+2024-05-21 21:25:05 +0000 UTC
+2024-05-21 21:25:07 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2024-05-21 21:25:09 +0000 UTC
+2024-05-21 21:25:11 +0000 UTC
+2024-05-21 21:25:13 +0000 UTC
+2024-05-21 21:25:15 +0000 UTC
+root@d20e67fef8c3:/usr/src/app# exit
+exit
+
+
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'

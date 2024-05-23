@@ -1,0 +1,26 @@
+Script started on 2022-12-30 12:54:09+02:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="180" LINES="40"]
+xxxx@xxxxx:~/Asiakirjat/Opinnot/devops_docker> docker run -d nginx
+deeb088aa0facf880ede64d4438a589780afdd6910adb8976fd51b03f887bf17
+xxxx@xxxxx:~/Asiakirjat/Opinnot/devops_docker> docker run -d nginx
+3f7fb6be5dc84695dc2c2b95c8e96e59bace5832f7e864edd0b31049e1faabbc
+xxxx@xxxxx:~/Asiakirjat/Opinnot/devops_docker> docker run -d nginx
+d7b02a896a3c1b29a21b516289d90eb475f916fc5e52e06d108a90a4a6ceeb9b
+xxxx@xxxxx:~/Asiakirjat/Opinnot/devops_docker> docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS         PORTS     NAMES
+d7b02a896a3c   nginx     "/docker-entrypoint.…"   5 seconds ago   Up 4 seconds   80/tcp    stupefied_lumiere
+3f7fb6be5dc8   nginx     "/docker-entrypoint.…"   6 seconds ago   Up 5 seconds   80/tcp    stupefied_lamarr
+deeb088aa0fa   nginx     "/docker-entrypoint.…"   8 seconds ago   Up 7 seconds   80/tcp    lucid_meitner
+xxxx@xxxxx:~/Asiakirjat/Opinnot/devops_docker> docker stop container stop d7b02
+d7b02
+xxxxx@xxxxx:~/Asiakirjat/Opinnot/devops_docker> docker container stop stupefied_la
+Error response from daemon: No such container: stupefied_la
+xxxx@xxxxxx:~/Asiakirjat/Opinnot/devops_docker> docker container stop stupefied_lamarr
+stupefied_lamarr
+xxxx@xxxxx:~/Asiakirjat/Opinnot/devops_docker> docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS                      PORTS     NAMES
+d7b02a896a3c   nginx     "/docker-entrypoint.…"   About a minute ago   Exited (0) 37 seconds ago             stupefied_lumiere
+3f7fb6be5dc8   nginx     "/docker-entrypoint.…"   About a minute ago   Exited (0) 11 seconds ago             stupefied_lamarr
+deeb088aa0fa   nginx     "/docker-entrypoint.…"   About a minute ago   Up About a minute           80/tcp    lucid_meitner
+xxxx@xxxxx:~/Asiakirjat/Opinnot/devops_docker> exit
+
+Script done on 2022-12-30 12:56:24+02:00 [COMMAND_EXIT_CODE="0"]
