@@ -1,0 +1,8 @@
+version: 'ubuntu'
+
+services:
+  exercise_2_1:
+    image: devopsdockeruh/simple-web-service
+    volumes:
+      - ./text.log:/usr/src/app/text.log
+    container_name: exercise_2_1
