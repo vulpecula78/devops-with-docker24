@@ -1,0 +1,23 @@
+version: '2.4'
+
+services:
+  frontend:
+    image: frontti
+    ports:
+      - 5000:5000
+    environment:
+      - REACT_APP_BACKEND_URL=http://localhost:8080
+    container_name: teht_2.4_frontend
+
+  backend:
+    image: backend
+    ports:
+      - 8080:8080
+    environment:
+      - REQUEST_ORIGIN=http://localhost:5000
+      - REDIS_HOST=redis
+    container_name: teht_2.4_backend
+
+  redis:
+    image: redis:latest
+    container_name: teht_2.4_redis

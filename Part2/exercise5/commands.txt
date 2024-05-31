@@ -1,0 +1,5 @@
+Didn't work on Firefox with any compute value.
+With konqueror browser compute >= 2:
+
+Given command:
+docker compose up --scale compute=2

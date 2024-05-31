@@ -1,0 +1,49 @@
+version: '2.9'
+
+services:
+  db:
+    image: postgres:13.2-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: salasana
+    volumes:
+      - type: bind
+        source: ./database
+        target: /var/lib/postgresql/data
+    container_name: teht_2.9_db
+
+  frontend:
+    image: frontti
+    ports:
+      - 5000:5000
+    environment:
+      - REACT_APP_BACKEND_URL=http://localhost:8080
+    container_name: teht_2.9_frontend
+
+  backend:
+    image: backend_ex29
+    ports:
+      - 8080:8080
+    environment:
+      - REQUEST_ORIGIN=http://localhost
+      - REDIS_HOST=redis
+      - POSTGRES_HOST=db
+      - POSTGRES_DATABASE=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=salasana
+    container_name: teht_2.8_backend
+
+  redis:
+    image: redis:latest
+    container_name: teht_2.9_redis
+
+  nginx:
+    image: nginx
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    container_name: teht_2.9_nginx
+
+volumes:
+  database:

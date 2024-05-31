@@ -1,0 +1,13 @@
+#Exercise 2.9 backend
+FROM golang:1.16
+
+ENV REQUEST_ORIGIN=http://localhost
+WORKDIR /usr/src/app
+COPY . .
+
+RUN go build
+
+CMD ["./server"]
+
+
+#docker build . -t backend_ex29
